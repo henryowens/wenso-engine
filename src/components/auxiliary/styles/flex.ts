@@ -1,6 +1,6 @@
-import { Spacings } from "@/style";
-import { useMargin, usePadding } from "@/style/helpers/spacing";
-import { FlexDirectionProperty, FlexWrapProperty } from "@/models";
+import { Spacings } from "../../../style";
+import { useMargin, usePadding } from "../../../style/helpers/spacing";
+import { FlexDirectionProperty, FlexWrapProperty } from "../../../models";
 import { Property } from "csstype";
 import { classes, style } from "typestyle";
 

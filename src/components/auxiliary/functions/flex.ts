@@ -1,9 +1,9 @@
 import { Property } from "csstype";
 import { h, PropType } from "vue";
 
-import { Spacings } from "@/style";
-import { FlexDirectionProperty, FlexWrapProperty } from "@/models";
-import { withProps } from "@/utils/vue";
+import { Spacings } from "../../../style";
+import { FlexDirectionProperty, FlexWrapProperty } from "../../../models";
+import { withProps } from "../../../utils/vue";
 import { flexStyle } from "../styles";
 
 export default withProps(

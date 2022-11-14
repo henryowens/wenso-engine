@@ -1,4 +1,5 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import engine from "./lib.index";
 
-createApp(App).mount("#app");
+createApp(App).use(engine).mount("#app");

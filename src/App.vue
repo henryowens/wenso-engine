@@ -1,4 +1,6 @@
 <template>
   <p>Wenso Engine</p>
-  <p>welcome</p>
+  <we-text />
 </template>
+
+<script setup lang="ts"></script>

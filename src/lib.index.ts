@@ -1,3 +1,9 @@
-import _default from "./plugin";
+import { App } from "vue";
 
-export default _default;
+export * from "./components";
+
+import { WeText } from "./components";
+
+export default (app: App) => {
+  app.component("we-text", WeText);
+};
