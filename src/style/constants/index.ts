@@ -8,3 +8,4 @@ export {
   SIZE_X_SMALL,
 } from "./sizes";
 export { SPACING_MAP } from "./spacing";
+export * from "./typeography";

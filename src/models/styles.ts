@@ -8,3 +8,13 @@ export type FlexDirectionProperty =
   | "row-reverse";
 
 export type FlexWrapProperty = Globals | "nowrap" | "wrap" | "wrap-reverse";
+
+export type TextAlign =
+  | Globals
+  | "center"
+  | "end"
+  | "justify"
+  | "left"
+  | "match-parent"
+  | "right"
+  | "start";

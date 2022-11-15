@@ -1,9 +1,5 @@
-import { App } from "vue";
+import plugin from "./plugin";
 
 export * from "./components";
 
-import { WeText } from "./components";
-
-export default (app: App) => {
-  app.component("we-text", WeText);
-};
+export default plugin;

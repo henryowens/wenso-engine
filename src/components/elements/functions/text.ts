@@ -1,77 +1,43 @@
 import { Property } from "csstype";
-import { px } from "csx";
-import { classes, style } from "typestyle";
 import { h, PropType } from "vue";
 
-import { Spacings } from "../../../style";
-import { useMargin, usePadding } from "../../../style/helpers/spacing";
+import { TextAlign } from "../../../models";
+import { Spacings, TextSizes, textSizes } from "../../../style";
 import { withProps } from "../../../utils/vue";
-
-const typeFontSizeMap = {
-  h1: px(55),
-  h2: px(42),
-  h3: px(32),
-  h4: px(28),
-  h5: px(22),
-  h6: px(18),
-  p: px(16),
-};
-
-export type TextType = keyof typeof typeFontSizeMap;
+import { textStyle } from "../styles";
 
 export default withProps(
   {
     textAlign: {
-      type: String as PropType<Property.TextAlign>,
+      type: String as PropType<TextAlign>,
       required: false,
       default: "left",
     },
-    type: {
-      type: String as PropType<TextType>,
-      default: "p",
+    fontWeight: {
+      type: String as PropType<Property.FontWeight>,
+      required: false,
+      default: "normal",
+    },
+    size: {
+      type: String as PropType<TextSizes>,
+      required: false,
+      default: "x-sm",
+    },
+    margin: {
+      type: String as PropType<Spacings>,
+      required: false,
+      default: "no",
+    },
+    padding: {
+      type: String as PropType<Spacings>,
+      required: false,
+      default: "no",
     },
   },
   (props, context) =>
-    h(props.type, context.slots.default && context.slots.default())
+    h(
+      textSizes[props.size].type,
+      { class: textStyle(props) },
+      context.slots.default && context.slots.default()
+    )
 );
-
-// export default withProps(
-//   {
-//     textAlign: {
-//       type: String as PropType<
-//         | "center"
-//         | "end"
-//         | "justify"
-//         | "left"
-//         | "match-parent"
-//         | "right"
-//         | "start"
-//       >,
-//       required: false,
-//     },
-//     type: {
-//       type: String as PropType<TextType>,
-//       default: "p",
-//     },
-//     margin: { type: String as PropType<Spacings>, default: "no" },
-//     padding: { type: String as PropType<Spacings>, default: "no" },
-//     class: { type: String, required: false },
-//   },
-//   (props, context) =>
-//     h(
-//       props.type,
-//       {
-//         class: classes(
-//           style({
-//             textAlign: props.textAlign || "left",
-//             fontSize: typeFontSizeMap[props.type],
-//             ...useMargin(props.margin),
-//             ...usePadding(props.padding),
-//           }),
-//           props.class
-//         ),
-//       },
-//       // context.slots
-//       "hello world"
-//     )
-// );
