@@ -1,3 +1,4 @@
-export { Sizes } from "./sizes";
-export { Spacings, Spacing } from "./spacing";
+export * from "./colors";
+export * from "./sizes";
+export * from "./spacing";
 export * from "./typeography";

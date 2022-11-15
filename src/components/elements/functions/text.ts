@@ -2,7 +2,7 @@ import { Property } from "csstype";
 import { h, PropType } from "vue";
 
 import { TextAlign } from "../../../models";
-import { Spacings, TextSizes, textSizes } from "../../../style";
+import { Colors, Spacings, TextSizes, textSizes } from "../../../style";
 import { withProps } from "../../../utils/vue";
 import { textStyle } from "../styles";
 
@@ -32,6 +32,11 @@ export default withProps(
       type: String as PropType<Spacings>,
       required: false,
       default: "no",
+    },
+    color: {
+      type: String as PropType<Colors>,
+      required: false,
+      default: "black",
     },
   },
   (props, context) =>

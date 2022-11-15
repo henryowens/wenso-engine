@@ -1,2 +1,3 @@
+export { default as useColors, defaultColors } from "./colors";
 export { default as useHover, useHoverStyle } from "./hover";
-export { useMargin, usePadding } from "./spacing";
+export * from "./spacing";
