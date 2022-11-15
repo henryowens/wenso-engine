@@ -26,8 +26,13 @@ export default withProps(
       required: false,
       default: "left",
     },
+    type: {
+      type: String as PropType<TextType>,
+      default: "p",
+    },
   },
-  (props) => h("h1", props.textAlign)
+  (props, context) =>
+    h(props.type, context.slots.default && context.slots.default())
 );
 
 // export default withProps(
