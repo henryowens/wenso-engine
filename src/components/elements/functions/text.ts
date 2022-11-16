@@ -40,9 +40,5 @@ export default withProps(
     },
   },
   (props, context) =>
-    h(
-      textSizes[props.size].type,
-      { class: textStyle(props) },
-      context.slots.default && context.slots.default()
-    )
+    h(textSizes[props.size].type, { class: textStyle(props) }, context.slots)
 );
