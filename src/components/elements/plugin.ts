@@ -1,8 +1,9 @@
 import { App } from "vue";
-import { WeButton, WeImg, WeText } from "./functions";
+import { WeButton, WeImg, WeLink, WeText } from "./functions";
 
 export default (app: App) => {
   app.component("we-text", WeText);
   app.component("we-button", WeButton);
   app.component("we-img", WeImg);
+  app.component("we-link", WeLink);
 };

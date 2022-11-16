@@ -130,6 +130,24 @@
     <h2><b>margin no</b></h2>
     <we-img src="https://picsum.photos/300/200" />
   </div>
+
+  <div>
+    <h1><u>Link Component</u></h1>
+    <h2><b>xx-large</b></h2>
+    <div><we-link size="xx-lg">Wenso Enginge</we-link></div>
+    <h2><b>x-large</b></h2>
+    <div><we-link size="x-lg">Wenso Enginge</we-link></div>
+    <h2><b>large</b></h2>
+    <div><we-link size="lg">Wenso Enginge</we-link></div>
+    <h2><b>medium</b></h2>
+    <div><we-link size="m">Wenso Enginge</we-link></div>
+    <h2><b>small</b></h2>
+    <div><we-link size="sm">Wenso Enginge</we-link></div>
+    <h2><b>x-small</b></h2>
+    <div><we-link size="x-sm">Wenso Enginge</we-link></div>
+    <h2><b>xx-small</b></h2>
+    <div><we-link size="xx-sm">Wenso Enginge</we-link></div>
+  </div>
 </template>
 
 <script setup lang="ts"></script>
