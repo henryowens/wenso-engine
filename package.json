@@ -1,6 +1,6 @@
 {
   "name": "wenso-engine",
-  "version": "0.1.65",
+  "version": "0.1.66",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -48,5 +48,6 @@
     "typescript": "~4.5.5",
     "vue-loader": "^16.8.3"
   },
+  "main": "src/lib.index.ts",
   "types": "types/index.d.ts"
 }
