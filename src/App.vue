@@ -148,6 +148,28 @@
     <h2><b>xx-small</b></h2>
     <div><we-link size="xx-sm">Wenso Enginge</we-link></div>
   </div>
+
+  <div>
+    <h1><u>Icon Component</u></h1>
+    <h2><b>margin xx-large</b></h2>
+    <we-icon name="ticket" margin="xx-lg" width="100px" />
+    <h2><b>margin x-large</b></h2>
+    <we-icon name="ticket" margin="x-lg" width="100px" />
+    <h2><b>margin large</b></h2>
+    <we-icon name="ticket" margin="lg" width="100px" />
+    <h2><b>margin medium</b></h2>
+    <we-icon name="ticket" margin="m" width="100px" />
+    <h2><b>margin small</b></h2>
+    <we-icon name="ticket" margin="sm" width="100px" />
+    <h2><b>margin x-small</b></h2>
+    <we-icon name="ticket" margin="x-sm" width="100px" />
+    <h2><b>margin xx-small</b></h2>
+    <we-icon name="ticket" margin="xx-sm" width="100px" />
+    <h2><b>margin no</b></h2>
+    <we-icon name="ticket" margin="no" width="100px" />
+    <h2><b>custom color</b></h2>
+    <we-icon name="ticket" margin="no" color="primary" width="100px" />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
