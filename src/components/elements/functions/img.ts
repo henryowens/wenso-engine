@@ -2,7 +2,7 @@ import { h, PropType } from "vue";
 
 import { imgStyle } from "../styles";
 import { withProps } from "../../../utils/vue";
-import { Spacings } from "@/style";
+import { Spacings } from "../../../style";
 
 export default withProps(
   {

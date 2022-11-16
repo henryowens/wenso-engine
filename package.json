@@ -1,6 +1,6 @@
 {
   "name": "wenso-engine",
-  "version": "0.1.64",
+  "version": "0.1.65",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
@@ -16,7 +16,9 @@
     "@fortawesome/vue-fontawesome": "^3.0.2",
     "@vue/compiler-sfc": "^3.2.45",
     "axios": "^1.1.3",
+    "csx": "^10.0.2",
     "core-js": "^3.8.3",
+    "typestyle": "^2.4.0",
     "vue": "^3.2.13"
   },
   "devDependencies": {
@@ -38,14 +40,12 @@
     "@vue/eslint-config-typescript": "^9.1.0",
     "babel-loader": "^8.3.0",
     "csstype": "^3.1.1",
-    "csx": "^10.0.2",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.0.3",
     "prettier": "^2.4.1",
     "typescript": "~4.5.5",
-    "typestyle": "^2.4.0",
     "vue-loader": "^16.8.3"
   },
   "types": "types/index.d.ts"

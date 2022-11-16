@@ -1,4 +1,10 @@
-import { Spacings, textSizes, TextSizes, useMargin, usePadding } from "@/style";
+import {
+  Spacings,
+  textSizes,
+  TextSizes,
+  useMargin,
+  usePadding,
+} from "../../../style";
 import { px } from "csx";
 import { style } from "typestyle";
 

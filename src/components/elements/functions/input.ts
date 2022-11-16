@@ -2,7 +2,7 @@ import { computed, h, PropType, resolveComponent } from "vue";
 
 import { inputStyle } from "../styles";
 import { withProps } from "../../../utils/vue";
-import { Spacings, TextSizes } from "@/style";
+import { Spacings, TextSizes } from "../../../style";
 import icon from "./icon";
 
 export default withProps(

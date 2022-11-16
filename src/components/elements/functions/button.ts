@@ -7,7 +7,7 @@ import {
   buttonTypeMap,
 } from "../styles";
 import { withProps } from "../../../utils/vue";
-import { Spacings, TextSizes } from "@/style";
+import { Spacings, TextSizes } from "../../../style";
 
 export type ButtonType = keyof typeof buttonTypeMap;
 export type ButtonAppearance = keyof typeof buttonAppearanceMap;

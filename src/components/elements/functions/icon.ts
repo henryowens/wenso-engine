@@ -2,7 +2,7 @@ import { h, PropType } from "vue";
 
 import { iconStyle } from "../styles";
 import { withProps } from "../../../utils/vue";
-import { Colors, Spacings, useColors } from "@/style";
+import { Colors, Spacings, useColors } from "../../../style";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { percent } from "csx";
 

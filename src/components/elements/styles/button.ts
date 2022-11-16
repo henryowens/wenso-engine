@@ -5,7 +5,7 @@ import {
   useColors,
   useMargin,
   usePadding,
-} from "@/style";
+} from "../../../style";
 import { px } from "csx";
 import { classes, style } from "typestyle";
 import { ButtonAppearance, ButtonType } from "../functions/button";

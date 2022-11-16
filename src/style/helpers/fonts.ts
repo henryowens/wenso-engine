@@ -1,4 +1,4 @@
-import { getGoogleFonts } from "@/service/googleFonts";
+import { getGoogleFonts } from "../../service/googleFonts";
 import { cssRaw, fontFace } from "typestyle";
 import { FontInput } from "../types";
 

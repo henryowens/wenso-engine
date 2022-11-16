@@ -1,5 +1,11 @@
-import { TextAlign } from "@/models";
-import { Spacings, textSizes, TextSizes, useColors, useMargin } from "@/style";
+import { TextAlign } from "../../../models";
+import {
+  Spacings,
+  textSizes,
+  TextSizes,
+  useColors,
+  useMargin,
+} from "../../../style";
 import { style } from "typestyle";
 
 export default ({
