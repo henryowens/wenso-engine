@@ -16,5 +16,5 @@ export default withProps(
       default: "no",
     },
   },
-  (props) => h("img", { src: props.src, class: imgStyle(props.margin) })
+  (props, _) => h("img", { src: props.src, class: imgStyle(props.margin) })
 );

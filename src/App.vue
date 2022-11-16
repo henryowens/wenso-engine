@@ -1,5 +1,11 @@
 <template>
   <div>
+    <h1><u>Input Component</u></h1>
+    <we-input v-model="model" placeholder="enter email" />
+    <div>model: {{ model }}</div>
+  </div>
+
+  <div>
     <h1><u>Text Component</u></h1>
     <we-text size="xx-lg"> Wenso Engine </we-text>
     <we-text size="x-lg"> Wenso Engine </we-text>
@@ -172,4 +178,8 @@
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import { ref } from "@vue/reactivity";
+
+const model = ref("");
+</script>
