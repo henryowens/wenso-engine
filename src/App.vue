@@ -110,6 +110,26 @@
       Wenso Engine
     </we-button>
   </div>
+
+  <div>
+    <h1><u>Image Component</u></h1>
+    <h2><b>margin xx-large</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="xx-lg" />
+    <h2><b>margin x-large</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="x-lg" />
+    <h2><b>margin large</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="lg" />
+    <h2><b>margin medium</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="m" />
+    <h2><b>margin small</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="sm" />
+    <h2><b>margin x-small</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="x-sm" />
+    <h2><b>margin xx-small</b></h2>
+    <we-img src="https://picsum.photos/300/200" margin="xx-sm" />
+    <h2><b>margin no</b></h2>
+    <we-img src="https://picsum.photos/300/200" />
+  </div>
 </template>
 
 <script setup lang="ts"></script>
