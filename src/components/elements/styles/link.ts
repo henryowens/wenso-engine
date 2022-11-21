@@ -4,6 +4,7 @@ import {
   textSizes,
   TextSizes,
   useColors,
+  useHover,
   useMargin,
 } from "../../../style";
 import { style } from "typestyle";
@@ -23,4 +24,5 @@ export default ({
     color: useColors.colorMap.link,
     fontSize: textSizes[size].size,
     ...useMargin(margin),
+    $nest: { ...useHover },
   });

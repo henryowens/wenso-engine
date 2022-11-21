@@ -1,6 +1,6 @@
 {
   "name": "wenso-engine",
-  "version": "0.1.66",
+  "version": "0.1.67",
   "private": false,
   "scripts": {
     "serve": "vue-cli-service serve",
