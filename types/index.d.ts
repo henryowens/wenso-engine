@@ -1,6 +1,4 @@
-import { Config } from "../src/service/config";
-import { Plugin } from "vue";
+export { withProps } from "../src/utils/vue";
 
-// global plugin
-declare const wensoEngine: Exclude<Plugin["install"], Config>;
+declare const wensoEngine: any;
 export default wensoEngine;
