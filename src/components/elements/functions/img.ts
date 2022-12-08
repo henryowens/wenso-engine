@@ -1,8 +1,9 @@
-import { h, PropType } from "vue";
+import { h, PropType, ref } from "vue";
 
 import { imgStyle } from "../styles";
 import { withProps } from "../../../utils/vue";
 import { Spacings } from "../../../style";
+import { classes, cssRaw, style } from "typestyle";
 
 export default withProps(
   {
@@ -26,9 +27,24 @@ export default withProps(
       default: "auto",
     },
   },
-  (props, _) =>
-    h("img", {
-      src: props.src,
-      class: imgStyle(props.margin, props.width, props.height),
-    })
+  (props, _) => {
+    const isLoaded = ref(false);
+    return [
+      h("p", `${isLoaded.value}`),
+      h("img", {
+        src: props.src,
+        class: classes(
+          imgStyle(props.margin, props.width, props.height),
+          style({
+            opacity: isLoaded.value === true ? 1 : 0,
+          })
+        ),
+        loading: "lazy",
+        onLoad: () => {
+          isLoaded.value = true;
+          console.log("isLoaded", isLoaded.value);
+        },
+      }),
+    ];
+  }
 );
