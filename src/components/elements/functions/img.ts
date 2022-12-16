@@ -40,10 +40,7 @@ export default withProps(
           })
         ),
         loading: "lazy",
-        onLoad: () => {
-          isLoaded.value = true;
-          console.log("isLoaded", isLoaded.value);
-        },
+        onLoad: () => (isLoaded.value = true),
       }),
     ];
   }

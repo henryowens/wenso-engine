@@ -1,9 +1,10 @@
 import { App } from "vue";
 
 import components from "./components";
-import useConfig, { Config } from "./service/config";
+import { Config } from "./models/config";
+import useConfig from "./service/config";
 
 export default (app: App, config: Config) => {
-  useConfig(config);
+  useConfig.mutateConfig(config);
   app.use(components);
 };

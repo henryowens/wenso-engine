@@ -1,23 +1,22 @@
 import { getGoogleFonts } from "../../service/googleFonts";
-import { cssRaw, fontFace } from "typestyle";
+import { cssRaw, style } from "typestyle";
 import { FontInput } from "../types";
 
-export default () => {
-  const registerFont = (name: string, src: string) =>
-    cssRaw(`@import url('${src}'); * { font-family: ${name} }`);
+export const fontFamily = (name?: string) => style({ fontFamily: name });
 
-  const update = async (font?: FontInput) => {
+export default () => {
+  const registerFont = (src: string) => cssRaw(`@import url('${src}');`);
+  const addFont = async (font?: FontInput) => {
     switch (font?.type) {
       case "custom":
-        registerFont(font.name, font.url);
+        registerFont(font.url);
         break;
       case "google":
         try {
           const resolvedFont = await getGoogleFonts(font?.name);
-          fontFace({
-            fontFamily: resolvedFont.family,
-            src: `https://fonts.googleapis.com/css?family=${resolvedFont.family}`,
-          });
+          registerFont(
+            `https://fonts.googleapis.com/css?family=${resolvedFont.family}`
+          );
         } catch (error) {
           return Promise.reject();
         }
@@ -26,7 +25,6 @@ export default () => {
         try {
           const resolvedFont = await getGoogleFonts("Rubik");
           registerFont(
-            resolvedFont.family,
             `https://fonts.googleapis.com/css?family=${resolvedFont.family}`
           );
         } catch (error) {
@@ -36,5 +34,5 @@ export default () => {
     }
   };
 
-  return { update };
+  return { addFont };
 };

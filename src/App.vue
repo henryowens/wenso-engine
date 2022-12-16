@@ -1,5 +1,4 @@
 <template>
-  <we-img-two src="https://picsum.photos/300/200" alt="test" />
   <!-- <div>
     <h1><u>Image Component</u></h1>
     <h2><b>margin xx-large</b></h2>

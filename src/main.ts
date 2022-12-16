@@ -1,11 +1,26 @@
 import { createApp } from "vue";
 import App from "./App.vue";
-import engine from "./lib.index";
-import { faTicket } from "@fortawesome/free-solid-svg-icons";
+import engine, { defineConfig } from "./lib.index";
 
 createApp(App)
-  .use(engine, {
-    colors: {},
-    icons: [faTicket],
-  })
+  .use(
+    engine,
+    defineConfig({
+      colors: {},
+      // icons: [faTicket],
+      fonts: [
+        { type: "google", name: "Dosis" },
+        { type: "google", name: "Nunito" },
+        { type: "google", name: "Hind Vadodara" },
+      ],
+      defaultFont: "Dosis",
+      components: {
+        text: {
+          fontFamily: {
+            "x-lg": "Nunito",
+          },
+        },
+      },
+    })
+  )
   .mount("#app");
