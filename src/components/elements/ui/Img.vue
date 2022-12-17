@@ -11,9 +11,10 @@
 </template>
 
 <script setup lang="ts">
-import { Spacings } from "@/style";
 import { ref } from "@vue/reactivity";
 import { cssRaw } from "typestyle";
+
+import { Spacings } from "../../../style";
 import { imgStyle } from "../styles";
 
 const props = withDefaults(

@@ -1,4 +1,4 @@
-import { ColorConfig, FontInput } from "@/style";
+import { ColorConfig, FontInput } from "../../style";
 import { IconDefinition, IconPack } from "@fortawesome/fontawesome-svg-core";
 import ComponentConfig from "./components";
 
