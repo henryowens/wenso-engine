@@ -12,10 +12,10 @@ import { ButtonAppearance, ButtonType } from "../functions/button";
 
 const baseButton = (margin: Spacings) =>
   style({
-    color: useColors.colorMap.white,
+    color: useColors.colors.white,
     border: `5px solid`,
     borderRadius: px(15),
-    background: useColors.colorMap.white,
+    background: useColors.colors.white,
     ...usePadding("xx-sm x-sm"),
     ...useMargin(margin),
   });
@@ -29,15 +29,15 @@ export const buttonAppearanceMap = {
     }),
   outlined: (color: string) =>
     style({
-      background: useColors.colorMap.white,
+      background: useColors.colors.white,
       color,
       $debugName: "we-btn-outlined",
     }),
 };
 
 export const buttonTypeMap = {
-  primary: useColors.colorMap.primary,
-  secondary: useColors.colorMap.secondary,
+  primary: useColors.colors.primary,
+  secondary: useColors.colors.secondary,
 };
 
 export const buttonTextStyle = (size: TextSizes) =>
@@ -52,5 +52,5 @@ export const buttonStyle = (
 ) =>
   classes(
     baseButton(margin),
-    buttonAppearanceMap[appearance](buttonTypeMap[type])
+    buttonAppearanceMap[appearance](buttonTypeMap[type] || "black")
   );

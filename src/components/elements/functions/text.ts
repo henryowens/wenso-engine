@@ -3,7 +3,7 @@ import { classes } from "typestyle";
 import { h, PropType } from "vue";
 
 import { TextAlign } from "../../../models";
-import { Colors, Spacings, TextSizes, textSizes } from "../../../style";
+import { Spacings, TextSizes, textSizes } from "../../../style";
 import { withProps } from "../../../utils/vue";
 import { getTextFont, textStyle } from "../styles";
 
@@ -35,7 +35,7 @@ export default withProps(
       default: "no",
     },
     color: {
-      type: String as PropType<Colors>,
+      type: String,
       required: false,
       default: "black",
     },

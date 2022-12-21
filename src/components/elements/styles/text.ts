@@ -3,7 +3,6 @@ import { style } from "typestyle";
 import { Property } from "csstype";
 
 import {
-  Colors,
   fontFamily,
   Spacings,
   textSizes,
@@ -38,13 +37,13 @@ export default ({
   fontWeight: Property.FontWeight;
   margin: Spacings;
   padding: Spacings;
-  color: Colors;
+  color: string;
 }) =>
   style({
     fontSize: textSizes[size].size,
     textAlign,
     fontWeight,
-    color: useColors.colorMap[color],
+    color: useColors.colors[color],
     ...useMargin(margin),
     ...usePadding(padding),
   });

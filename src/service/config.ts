@@ -1,12 +1,14 @@
 import { library } from "@fortawesome/fontawesome-svg-core";
 import { reactive } from "vue";
 
-import { Config } from "../models/config";
+import { Config, IconDefinitionOrPack } from "../models/config";
 import { useColors, useFont } from "../style";
+
+const { colors, update: updateColors } = useColors;
 
 const instance = () => {
   const config = reactive<Config>({
-    colors: undefined,
+    colors,
     fonts: undefined,
     defaultFont: undefined,
     icons: undefined,
@@ -16,13 +18,14 @@ const instance = () => {
 
   const setup = () => {
     const { addFont } = useFont();
-    config.colors && useColors.update(config.colors);
+    config.colors && updateColors(config.colors);
     config.fonts?.forEach((font) => addFont(font));
-    config.icons && library.add(config.icons);
+    const icons = config.icons;
+    icons && library.add(icons);
   };
 
   const mutateConfig = (cfg: Config) => {
-    config.colors = cfg.colors;
+    // config.colors = cfg.colors;
     config.fonts = cfg.fonts;
     config.defaultFont = cfg.defaultFont;
     config.icons = cfg.icons;

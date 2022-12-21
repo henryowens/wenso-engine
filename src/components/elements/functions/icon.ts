@@ -2,7 +2,7 @@ import { h, PropType } from "vue";
 
 import { iconStyle } from "../styles";
 import { withProps } from "../../../utils/vue";
-import { Colors, Spacings, useColors } from "../../../style";
+import { Spacings, useColors } from "../../../style";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import { percent } from "csx";
 
@@ -18,7 +18,7 @@ export default withProps(
       default: "no",
     },
     color: {
-      type: String as PropType<Colors>,
+      type: String,
       required: false,
       default: "black",
     },
@@ -36,7 +36,7 @@ export default withProps(
   (props) =>
     h(FontAwesomeIcon, {
       icon: props.name,
-      color: useColors.colorMap[props.color],
+      color: useColors.colors[props.color as any],
       class: iconStyle(props.margin, props.width, props.height),
     })
 );

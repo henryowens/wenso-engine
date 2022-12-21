@@ -21,7 +21,7 @@ export default ({
   style({
     textAlign,
     textDecoration: "underline",
-    color: useColors.colorMap.link,
+    color: useColors.colors.link,
     fontSize: textSizes[size].size,
     ...useMargin(margin),
     $nest: { ...useHover },

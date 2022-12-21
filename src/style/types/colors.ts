@@ -1,12 +1,8 @@
-import { defaultColors } from "../helpers";
-
-export interface ColorConfig {
+export type ColorConfig = {
   primary?: string;
   secondary?: string;
   success?: string;
   error?: string;
   warning?: string;
   link?: string;
-}
-
-export type Colors = keyof typeof defaultColors;
+} & Record<string, string>;
