@@ -32,6 +32,7 @@ export default ({
   size,
   textAlign,
   color,
+  fontFamily,
 }: {
   size: TextSizes;
   textAlign: TextAlign;
@@ -39,8 +40,10 @@ export default ({
   margin: Spacings;
   padding: Spacings;
   color: Colors;
+  fontFamily?: string;
 }) =>
   style({
+    fontFamily,
     fontSize: textSizes[size].size,
     textAlign,
     fontWeight,

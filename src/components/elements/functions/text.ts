@@ -19,6 +19,10 @@ export default withProps(
       required: false,
       default: "normal",
     },
+    fontFamily: {
+      type: String,
+      required: false,
+    },
     size: {
       type: String as PropType<TextSizes>,
       required: false,

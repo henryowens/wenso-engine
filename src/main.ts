@@ -9,7 +9,7 @@ createApp(App)
       colors: {},
       // icons: [faTicket],
       fonts: [
-        { type: "google", name: "Dosis" },
+        { type: "google", name: "Dosis", weights: ["600", "700"] },
         { type: "google", name: "Nunito" },
         { type: "google", name: "Hind Vadodara" },
       ],

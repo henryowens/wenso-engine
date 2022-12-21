@@ -14,8 +14,10 @@ export default () => {
       case "google":
         try {
           const resolvedFont = await getGoogleFonts(font?.name);
+          const weights =
+            (font.weights && `:wght@${font.weights.join(";")}`) || "";
           registerFont(
-            `https://fonts.googleapis.com/css?family=${resolvedFont.family}`
+            `https://fonts.googleapis.com/css?family=${resolvedFont.family}${weights}`
           );
         } catch (error) {
           return Promise.reject();
